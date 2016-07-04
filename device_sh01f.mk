@@ -5,8 +5,10 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 $(call inherit-product-if-exists, vendor/sharp/sh01f/sh01f-vendor.mk)
 
+# Ramdisk
 PRODUCT_COPY_FILES += \
-  device/sharp/sh01f/root/ueventd.qcom.rc:root/ueventd.qcom.rc
+  device/sharp/sh01f/root/ueventd.qcom.rc:root/ueventd.qcom.rc \
+  device/sharp/sh01f/root/init.sharp.usb.rc:root/init.sharp.usb.rc
 
 PRODUCT_COPY_FILES += \
   device/sharp/sh01f/system/shtps_key.idc:system/usr/idc/shtps_key.idc \
@@ -76,12 +78,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     lights.msm8974
 
-# Media profile
-PRODUCT_COPY_FILES += \
-    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
-    $(COMMON_PATH)/media_codecs.xml:system/etc/media_codecs.xml
 
 # Media
 PRODUCT_PACKAGES += \
@@ -109,14 +105,6 @@ PRODUCT_PACKAGES += \
     libmm-omxcore \
     libstagefrighthw
 
-# Overlay
-DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
-ifneq ($(BOARD_HAVE_RADIO),false)
-    DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay-radio
-    $(call inherit-product, $(COMMON_PATH)/radio.mk)
-else
-    DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay-wifionly
-endif
 
 # Power
 PRODUCT_PACKAGES += \
