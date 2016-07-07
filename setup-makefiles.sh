@@ -44,7 +44,7 @@ EOF
 
 LOCAL_PATH := \$(call my-dir)
 
-ifeq (\$(BOARD_VENDOR),sony)
+ifeq (\$(BOARD_VENDOR),sharp)
 ifeq (\$(TARGET_BOARD_PLATFORM),$TARGET_BOARD_PLATFORM)
 
 

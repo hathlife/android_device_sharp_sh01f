@@ -19,3 +19,10 @@ for FILE in `cat proprietary-files.txt | grep -v ^# | grep -v ^$`; do
 done
 
 chmod 755 $BASE/bin/*
+
+
+export FP=$(cd ${0%/*} && pwd -P)
+export VENDOR=$(basename $(dirname $FP))
+export DEVICE=$(basename $FP)
+export BOARDCONFIGVENDOR=false
+./setup-makefiles.sh
