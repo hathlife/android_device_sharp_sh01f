@@ -50,10 +50,8 @@ vendor/bin/colorvariation.sh
 vendor/bin/init_devadmin.sh
 vendor/etc/audio_effects.conf
 vendor/etc/device_policies.xml
-vendor/etc/fallback_fonts.xml
 vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/drm/libsolopvodfdrmplugin_wrapper.so
-vendor/lib/egl
 vendor/lib/egl/eglsubAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
@@ -259,7 +257,6 @@ vendor/lib/libxtadapter.so
 vendor/lib/libxtwifi_ulp_adaptor.so
 vendor/lib/libxtwifi_zpp_adaptor.so
 vendor/lib/mediadrm/libwvdrmengine.so
-vendor/lib/rfsa/adsp
 vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
 vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
