@@ -1,7 +1,11 @@
 #!/bin/sh
 
-RECOVERY_ROOT=recovery/root
-BASE=$RECOVERY_ROOT/vendor
+export FP=$(cd ${0%/*} && pwd -P)
+export VENDOR=$(basename $(dirname $FP))
+export DEVICE=$(basename $FP)
+export BOARDCONFIGVENDOR=false
+
+BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 
 mkdir -p $BASE
 
@@ -21,8 +25,4 @@ done
 chmod 755 $BASE/bin/*
 
 
-export FP=$(cd ${0%/*} && pwd -P)
-export VENDOR=$(basename $(dirname $FP))
-export DEVICE=$(basename $FP)
-export BOARDCONFIGVENDOR=false
 ./setup-makefiles.sh
