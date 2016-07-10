@@ -1,10 +1,8 @@
-/boot     emmc    /dev/block/mmcblk0p13
-/cache    ext4    /dev/block/mmcblk0p32
-/data     ext4    /dev/block/mmcblk0p33 length=-16384
-/persist  ext4    /dev/block/mmcblk0p20
-/durable  ext4    /dev/block/mmcblk0p30
-/sdcard   datamedia	NULL
-/recovery emmc    /dev/block/mmcblk0p14
-/external_sd vfat /dev/block/mmcblk1p1
-/system   ext4    /dev/block/mmcblk0p17
-/fotadata vfat    /dev/block/mmcblk0p31
+/system         ext4    /dev/block/platform/msm_sdcc.1/by-name/system
+/data           ext4    /dev/block/platform/msm_sdcc.1/by-name/userdata     flags=encryptable=/dev/block/platform/msm_sdcc.1/by-name/metadata
+/cache          ext4    /dev/block/platform/msm_sdcc.1/by-name/cache
+/boot           emmc    /dev/block/platform/msm_sdcc.1/by-name/boot         flags=backup=1
+/recovery       emmc    /dev/block/platform/msm_sdcc.1/by-name/recovery     flags=backup=1
+/sdcard         vfat    /dev/block/mmcblk1p1                                flags=display="micro SD card";storage;wipeingui;removable
+/persist  ext4    /dev/block/platform/msm_sdcc.1/by-name/persist
+/durable  ext4    /dev/block/platform/msm_sdcc.1/by-name/durable
