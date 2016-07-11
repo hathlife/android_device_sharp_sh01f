@@ -46,9 +46,17 @@ TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard"
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 BOARD_HAS_NO_REAL_SDCARD := true
+#TW_TARGET_USES_QCOM_BSP := true
 TW_THEME :=  portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
 TW_INCLUDE_CRYPTO := false
+TW_EXCLUDE_MTP := true
+TWHAVE_SELINUX := true
+TW_DEFAULT_BRIGHTNESS := 150
+TW_CUSTOM_BATTERY_PATH := /sys/class/power_supply/battery/capacity
+TWRP_INCLUDE_LOGCAT := true
+TW_EXTRA_LANGUAGES := true 
+TW_DEFAULT_LANGUAGE := zh_CN
 
 TARGET_RECOVERY_FSTAB := device/sharp/sh01f/recovery.fstab
 
