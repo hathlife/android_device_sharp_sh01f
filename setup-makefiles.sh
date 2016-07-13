@@ -108,9 +108,6 @@ EOF
 
 LOCAL_PATH := \$(call my-dir)
 
-ifeq (\$(BOARD_VENDOR),sharp)
-ifeq (\$(BOARD_VENDOR_PLATFORM),$BOARD_VENDOR_PLATFORM)
-
 include \$(CLEAR_VARS)
 LOCAL_MODULE := libtime_genoff
 LOCAL_MODULE_OWNER := $VENDOR
@@ -121,8 +118,5 @@ LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 include \$(BUILD_PREBUILT)
 
-
-endif
-endif
 EOF
 fi
