@@ -1,7 +1,7 @@
-USE_CAMERA_STUB := true
+
 
 # inherit from the proprietary version
--include vendor/sharp/sh01f/BoardConfigVendor.mk
+include vendor/sharp/sh01f/BoardConfigVendor.mk
 
 TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := MSM8974
