@@ -38,7 +38,7 @@ do
     if [ -n "$DEST" ]; then
       FILE=$DEST
     fi
-    echo "    $OUTDIR/proprietary/$FILE:system/$FILE$LINEEND" >> $MAKEFILE
+    echo "    \$(LOCAL_PATH)/proprietary/$FILE:system/$FILE$LINEEND" >> $MAKEFILE
   fi
 done
 
@@ -131,6 +131,16 @@ LOCAL_PATH := \$(call my-dir)
 
 ifeq (\$(BOARD_VENDOR),sharp)
 ifeq (\$(TARGET_BOARD_PLATFORM),$TARGET_BOARD_PLATFORM)
+
+include \$(CLEAR_VARS)
+LOCAL_MODULE := libtime_genoff
+LOCAL_MODULE_OWNER := sharp
+LOCAL_SRC_FILES := \$(LOCAL_PATH)/proprietary/vendor/lib/libtime_genoff.so
+LOCAL_MODULE_PATH := \$(TARGET_OUT_VENDOR_SHARED_LIBRARIES)
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+include \$(BUILD_PREBUILT)
 
 
 endif

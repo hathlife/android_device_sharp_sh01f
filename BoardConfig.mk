@@ -57,6 +57,8 @@ TW_CUSTOM_BATTERY_PATH := /sys/class/power_supply/battery/capacity
 TWRP_INCLUDE_LOGCAT := true
 TW_EXTRA_LANGUAGES := true 
 TW_DEFAULT_LANGUAGE := zh_CN
+BOARD_RECOVERY_SWIPE := true
+TARGET_NO_SEPARATE_RECOVERY := true
 
 TARGET_RECOVERY_FSTAB := device/sharp/sh01f/recovery.fstab
 

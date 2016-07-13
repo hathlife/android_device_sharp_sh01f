@@ -7,22 +7,22 @@ $(call inherit-product-if-exists, vendor/sharp/sh01f/sh01f-vendor.mk)
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-  device/sharp/sh01f/root/ueventd.qcom.rc:root/ueventd.qcom.rc \
-  device/sharp/sh01f/root/init.sharp.usb.rc:root/init.sharp.usb.rc \
-  device/sharp/sh01f/root/init.sharp.usb.rc:root/init.recovery.usb.rc \
-  device/sharp/sh01f/root/fstab.qcom:root/fstab.qcom \
+  $(LOCAL_PATH)/root/ueventd.qcom.rc:root/ueventd.qcom.rc \
+  $(LOCAL_PATH)/root/init.sharp.usb.rc:root/init.sharp.usb.rc \
+  $(LOCAL_PATH)/root/init.sharp.usb.rc:root/init.recovery.usb.rc \
+  $(LOCAL_PATH)/root/fstab.qcom:root/fstab.qcom \
 
 PRODUCT_COPY_FILES += \
-  device/sharp/sh01f/system/usr/idc/shtps_key.idc:system/usr/idc/shtps_key.idc \
-  device/sharp/sh01f/system/usr/idc/shtps_rmi.idc:system/usr/idc/shtps_rmi.idc \
-  device/sharp/sh01f/system/usr/idc/shcts_key.idc:system/usr/idc/shcts_key.idc \
-  device/sharp/sh01f/system/usr/idc/SH_gpio-keys.idc:system/usr/idc/SH_gpio-keys.idc \
-  device/sharp/sh01f/system/usr/idc/Headset.idc:system/usr/idc/Headset.idc \
-  device/sharp/sh01f/system/usr/idc/pmic8xxx_pwrkey.idc:system/usr/idc/pmic8xxx_pwrkey.idc \
-  device/sharp/sh01f/system/usr/idc/qwerty.idc:system/usr/idc/qwerty.idc \
-  device/sharp/sh01f/system/usr/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
+  $(LOCAL_PATH)/system/usr/idc/shtps_key.idc:system/usr/idc/shtps_key.idc \
+  $(LOCAL_PATH)/system/usr/idc/shtps_rmi.idc:system/usr/idc/shtps_rmi.idc \
+  $(LOCAL_PATH)/system/usr/idc/shcts_key.idc:system/usr/idc/shcts_key.idc \
+  $(LOCAL_PATH)/system/usr/idc/SH_gpio-keys.idc:system/usr/idc/SH_gpio-keys.idc \
+  $(LOCAL_PATH)/system/usr/idc/Headset.idc:system/usr/idc/Headset.idc \
+  $(LOCAL_PATH)/system/usr/idc/pmic8xxx_pwrkey.idc:system/usr/idc/pmic8xxx_pwrkey.idc \
+  $(LOCAL_PATH)/system/usr/idc/qwerty.idc:system/usr/idc/qwerty.idc \
+  $(LOCAL_PATH)/system/usr/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
 
-DEVICE_PACKAGE_OVERLAYS += device/sharp/sh01f/overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 $(call inherit-product, build/target/product/full.mk)
 
