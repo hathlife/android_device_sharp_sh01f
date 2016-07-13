@@ -3,7 +3,7 @@
 export FP=$(cd ${0%/*} && pwd -P)
 export VENDOR=$(basename $(dirname $FP))
 export DEVICE=$(basename $FP)
-export BOARDCONFIGVENDOR=false
+export BOARDCONFIGVENDOR=true
 
 BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 
