@@ -65,7 +65,7 @@ TARGET_RECOVERY_FSTAB := device/sharp/sh01f/recovery.fstab
 TW_EXCLUDE_SUPERSU := true
 
 # use CAF variants
-BOARD_USES_QCOM_HARDWARE := true
+#BOARD_USES_QCOM_HARDWARE := true  //kernel do not support
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
